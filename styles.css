@@ -1,1 +1,48 @@
-/*Maak hier jouw CSS!*/
+.container {
+    background-color: hsl(6,72%,89%);
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px auto 80px;
+    grid-template-areas:
+                      " header header header"
+                      " aside-left main aside-right"
+                      " footer footer footer";
+}
+.item {
+    background-color: hsl(289,13%,42%);
+    border: 2px solid hsl(289,13%,32%);
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-one {
+    grid-area: header;
+
+}
+
+#item-two {
+    grid-area: aside-left;
+
+
+}
+
+#item-three {
+    grid-area: main;
+
+
+}
+
+#item-four{
+    grid-area: aside-right;
+
+
+}
+
+#item-five{
+    grid-area: footer;
+
+}/*Maak hier jouw CSS!*/
