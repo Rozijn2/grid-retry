@@ -3,12 +3,14 @@
     display: grid;
     row-gap: 16px;
     column-gap: 16px;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 50px auto 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 150px auto 150px 90px;
     grid-template-areas:
-                      " header header header"
-                      " aside-left main aside-right"
-                      " footer footer footer";
+                      " header "
+                      " aside-left "
+                      " main "
+                      " aside-right "
+                      " footer ";
 }
 .item {
     background-color: hsl(289,13%,42%);
@@ -45,4 +47,20 @@
 #item-five{
     grid-area: footer;
 
-}/*Maak hier jouw CSS!*/
+} 
+
+@media screen and (min-width:576px) {
+    .container {
+        background-color: hsl(6,72%,89%);
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 150px auto 90px;
+        grid-template-areas:
+                      " header header header"
+                      " aside-left main aside-right"
+                      " footer footer footer";
+    }
+    
+}
